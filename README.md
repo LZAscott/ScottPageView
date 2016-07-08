@@ -4,7 +4,7 @@
 
 使用过程中发现bug，请及时反馈，谢谢
 
-实现原理[请看这里](http://blog.csdn.net/u010411521/article/details/51116175)
+实现原理[请看这里](http://lzascott.github.io/2016/04/10/%E4%B8%A4%E4%B8%AAimageView%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/)
 
 ______
 
