@@ -32,14 +32,6 @@ ______
 2.创建ScottPageView，设置各属性
 
 3.将ScottPageView添加到要展示到view上面
-######方式二：直接添加到xib\sb
-1.添加一个view到xib\sb上
-
-2.设置view的class为ScottPageView
-
-3.拖线到.m文件中，设置各属性
-
-
 
 #ScottPageView的常用属性方法
 
