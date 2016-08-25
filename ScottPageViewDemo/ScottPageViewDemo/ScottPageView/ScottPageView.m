@@ -224,6 +224,8 @@ typedef NS_ENUM(NSInteger, Direction) {
         }
     }
     self.currentImageView.image = _images.firstObject;
+    self.currentIndex = 0;
+    self.pageControl.currentPage = 0;
     self.pageControl.numberOfPages = _images.count;
     [self setScrollViewContentSize];
 }
