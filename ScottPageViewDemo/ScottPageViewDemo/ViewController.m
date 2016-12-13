@@ -11,8 +11,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet ScottPageView *pageView;
-
 @property (nonatomic, strong) ScottPageView *pageViewCode;
 
 @property (nonatomic, strong) NSArray *picArrs;
@@ -34,24 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self createWithXib];
     
     [self createWithCode];
 }
 
 #pragma mark - 代码创建
 - (void)createWithCode {
-    _pageViewCode = [ScottPageView pageViewWithImageArr:self.picArrs andImageClickBlock:^(NSInteger index) {
-        NSLog(@"点击代码创建的第%ld张图片",index+1);
-    }];
-    _pageViewCode.frame = CGRectMake(0, self.view.frame.size.height-230, self.view.frame.size.width, 180);
-    _pageViewCode.time = 1;
-    [self.view addSubview:_pageViewCode];
-}
-
-#pragma mark - xib创建
-- (void)createWithXib {
     
     NSMutableArray *desArr = [[NSMutableArray alloc] init];
     for (NSInteger i=0; i<self.picArrs.count; i++) {
@@ -59,30 +45,29 @@
         [desArr addObject:tempDesc];
     }
     
-    self.pageView.imageArr = self.picArrs;
-    self.pageView.describeArray = desArr;
-    self.pageView.time = 2;
-    self.pageView.imageClickBlock = ^(NSInteger index){
-        NSLog(@"点击了第%ld张图片",index+1);
-    };
+    _pageViewCode = [ScottPageView pageViewWithImageArr:self.picArrs andImageClickBlock:^(NSInteger index) {
+        NSLog(@"点击代码创建的第%ld张图片",index+1);
+    }];
+    _pageViewCode.frame = CGRectMake(0, 64, self.view.frame.size.width, 180);
+    _pageViewCode.describeArray = desArr;
+    _pageViewCode.time = 1;
+    [self.view addSubview:_pageViewCode];
 }
 
-
 - (IBAction)startBtnClick:(UIButton *)sender {
-    [self.pageView startTimer];
+    [self.pageViewCode startTimer];
 }
 
 - (IBAction)stopBtnClick:(UIButton *)sender {
-    [self.pageView stopTimer];
+    [self.pageViewCode stopTimer];
 }
-
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    CGRect originFrame = self.pageView.pageControl.frame;
-    originFrame.origin.y = CGRectGetHeight(self.pageView.frame) - 30;
-    self.pageView.pageControl.frame = originFrame;
+    CGRect originFrame = self.pageViewCode.pageControl.frame;
+    originFrame.origin.y = CGRectGetHeight(self.pageViewCode.frame) - 30;
+    self.pageViewCode.pageControl.frame = originFrame;
 }
 
 
