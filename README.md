@@ -8,7 +8,7 @@
 
 ______
 
-#ScottPageView的优点
+# ScottPageView的优点
 1.文件少，代码简洁
 
 2.同时支持本地图片及网络图片
@@ -19,21 +19,21 @@ ______
 
 5.自定义分页控件及图片描述
 
-#如何集成ScottPageView
-###导入
-######方式一：手动导入
+# 如何集成ScottPageView
+### 导入
+###### 方式一：手动导入
 将ScottPageView文件夹中的所有文件添加到项目中
 
 
-###创建
-######方式一：代码创建
+### 创建
+###### 方式一：代码创建
 1.导入主头文件 ScottPageView.h
 
 2.创建ScottPageView，设置各属性
 
 3.将ScottPageView添加到要展示到view上面
 
-#ScottPageView的常用属性方法
+# ScottPageView的常用属性方法
 
 1.imageArray：要轮播的图片数组，可传本地图片或网络图片路径
 
