@@ -223,7 +223,7 @@
 				TargetAttributes = {
 					6724855F1CBAA2C1007A1985 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = U9792C9E94;
+						DevelopmentTeam = 975BFBGUND;
 					};
 					672485781CBAA2C1007A1985 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -432,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 975BFBGUND;
 				INFOPLIST_FILE = ScottPageViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 975BFBGUND;
 				INFOPLIST_FILE = ScottPageViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -519,6 +521,7 @@
 				6724858F1CBAA2C2007A1985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		672485901CBAA2C2007A1985 /* Build configuration list for PBXNativeTarget "ScottPageViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +530,7 @@
 				672485921CBAA2C2007A1985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		672485931CBAA2C2007A1985 /* Build configuration list for PBXNativeTarget "ScottPageViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +539,7 @@
 				672485951CBAA2C2007A1985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

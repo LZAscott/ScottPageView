@@ -29,6 +29,11 @@ typedef void(^ClickBlock)(NSInteger index);
 @property (nonatomic, strong) NSArray *imageArr;
 
 /**
+ * 设置轮播图片的类型，默认为UIViewContentModeScaleToFill
+ */
+@property (nonatomic, assign) UIViewContentMode bannerImageViewContentMode;
+
+/**
  *  图片描述的字符串数组，应该与图片顺序相对应
  */
 @property (nonatomic, strong) NSArray *describeArray;

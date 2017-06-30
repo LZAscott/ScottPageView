@@ -104,6 +104,8 @@ typedef NS_ENUM(NSInteger, Direction) {
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.delegate = self;
         
+        _bannerImageViewContentMode = UIViewContentModeScaleToFill;
+        
         _currentImageView = [[UIImageView alloc] init];
         _currentImageView.userInteractionEnabled = YES;
         [_currentImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
@@ -294,6 +296,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 // 下一页
 - (void)nextPage {
     [self.scrollView setContentOffset:CGPointMake(self.width * 2, 0) animated:YES];
+    [self setNeedsLayout];
 }
 
 #pragma mark - 布局子控件
@@ -301,6 +304,13 @@ typedef NS_ENUM(NSInteger, Direction) {
     [super layoutSubviews];
     
     self.scrollView.contentInset = UIEdgeInsetsZero;
+    
+    if (self.currentImageView) {
+        self.currentImageView.contentMode = self.bannerImageViewContentMode;
+    }
+    if (self.nextImageView) {
+        self.nextImageView.contentMode = self.bannerImageViewContentMode;
+    }
 }
 
 #pragma mark - 点击图片
