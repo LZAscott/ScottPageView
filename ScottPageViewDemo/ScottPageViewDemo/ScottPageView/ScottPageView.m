@@ -250,6 +250,15 @@ typedef NS_ENUM(NSInteger, Direction) {
     }
 }
 
+#pragma mark - 设置图片模式
+- (void)setBannerImageViewContentMode:(UIViewContentMode)bannerImageViewContentMode {
+    if (self.currentImageView) {
+        self.currentImageView.contentMode = self.bannerImageViewContentMode;
+    }
+    if (self.nextImageView) {
+        self.nextImageView.contentMode = self.bannerImageViewContentMode;
+    }
+}
 
 #pragma mark - 设置scrollView的contentSize
 - (void)setScrollViewContentSize {
@@ -306,10 +315,7 @@ typedef NS_ENUM(NSInteger, Direction) {
     self.scrollView.contentInset = UIEdgeInsetsZero;
     
     if (self.currentImageView) {
-        self.currentImageView.contentMode = self.bannerImageViewContentMode;
-    }
-    if (self.nextImageView) {
-        self.nextImageView.contentMode = self.bannerImageViewContentMode;
+        self.currentImageView.frame = CGRectMake(self.width, 0, self.width, self.height);
     }
 }
 
