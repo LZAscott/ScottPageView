@@ -207,6 +207,9 @@ typedef NS_ENUM(NSInteger, Direction) {
         self.nextIndex = (self.currentIndex + 1) % _images.count;
     }
     self.nextImageView.image = self.images[self.nextIndex];
+    if (self.images.count <= 1) {
+        [self pauseScroll];
+    }
 }
 
 #pragma mark - 设置图片数组
